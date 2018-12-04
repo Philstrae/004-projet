@@ -12,8 +12,8 @@ class Agent:
     def __init__(self, agreeableness):
         self.agreeableness = agreeableness  
 
-agent = Agent()
-print(agent.say_hello("Céline"))
+#agent = Agent()
+#print(agent.say_hello("Céline"))
 
 first_agent = Agent(0)
 print(first_agent.agreeableness)
