@@ -27,6 +27,12 @@ class Position:
     def latitude(self):
         return self.latitude_degrees * math.pi / 180          
 
+class Zone:
+    def __init__(self, corner1, corner2):
+        self.corner1 = corner1
+        self.corner2 = corner2
+        self.inhabi
+
 def main():
     for agent_attributes in json.load(open("agents-100k.json")):
         latitude = agent_attributes.pop('latitude')
