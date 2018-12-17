@@ -43,9 +43,9 @@ class Zone:
         self.inhabitants = 0
 
     @classmethod
-    def initialize_zones(cls)
-        for latitude in range(cls.MIN_LATITUDE_DEGREES, cls.MAX_LATITUDE_DEGREES)
-            for longitude in range(cls.MIN_LONGITUDE_DEGREES, cls.MAX_LONGITUDE_DEGREES, WIDTH_DEGREES)
+    def initialize_zones(cls):
+        for latitude in range(cls.MIN_LATITUDE_DEGREES, cls.MAX_LATITUDE_DEGREES):
+            for longitude in range(cls.MIN_LONGITUDE_DEGREES, cls.MAX_LONGITUDE_DEGREES, cls.WIDTH_DEGREES):
                 bottom_left_corner = Position(longitude, latitude)
                 top_right_corner = Position(longitude + cls.WIDTH_DEGREES, latitude + cls.HEIGHT_DEGREES)
                 zone = Zone(bottom_left_corner, top_right_corner)
@@ -61,6 +61,6 @@ def main():
         position = Position(longitude, latitude)
         agent = Agent(position, **agent_attributes)
         print(agent.position.longitude_degrees, agent.position.latitude_degrees)
-        Zone.initialize_zones()
+        #Zone.initialize_zones()
 
 main()            
